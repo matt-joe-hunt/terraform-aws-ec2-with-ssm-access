@@ -4,16 +4,16 @@ variable "region-master" {
 }
 
 variable "project" {
-  type        = map(string)
+  type        = string
   description = "name of the project for consistent naming"
 }
 
 variable "instance_type" {
-  type        = map(string)
+  type        = string
   description = "The instance type to be used"
 }
 
 variable "ami_id" {
-  type        = map(string)
+  type        = string
   description = "The ami id to be used"
 }

@@ -4,8 +4,8 @@ provider "aws" {
 module "EC2" {
   source = "./modules/EC2"
 
-  project       = var.project[terraform.workspace]
-  instance_type = var.instance_type[terraform.workspace]
-  ami_id        = var.ami_id[terraform.workspace]
+  project       = var.project
+  instance_type = var.instance_type
+  ami_id        = var.ami_id
 
 }

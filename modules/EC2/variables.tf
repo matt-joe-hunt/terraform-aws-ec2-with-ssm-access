@@ -1,11 +1,9 @@
 variable "ami_id" {
-  type    = string
-  default = "null"
+  type = string
 }
 
 variable "instance_type" {
-  type    = string
-  default = null
+  type = string
 }
 
 variable "project" {

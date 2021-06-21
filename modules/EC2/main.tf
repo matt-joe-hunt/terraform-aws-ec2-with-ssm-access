@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2" {
   ami                         = var.ami_id == "null" ? data.aws_ssm_parameter.linuxAmi.value : var.ami_id
-  instance_type               = var.instance_type == "null" ? "t2.micro" : var.instance_type
+  instance_type               = var.instance_type
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg.id]
   subnet_id                   = tolist(data.aws_subnet_ids.default.ids)[0]

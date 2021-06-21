@@ -1,10 +1,10 @@
 variable "ami_id" {
-  type = string
+  type    = string
   default = "null"
 }
 
 variable "instance_type" {
-  type = string
+  type    = string
   default = null
 }
 

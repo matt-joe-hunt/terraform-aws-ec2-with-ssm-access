@@ -6,7 +6,7 @@ resource "aws_instance" "ec2" {
   subnet_id                   = tolist(data.aws_subnet_ids.default.ids)[0]
   iam_instance_profile        = aws_iam_instance_profile.ec2_iam_instance_profile.name
   tags = {
-    Name = "${var.project}_instance"
+    Name        = "${var.project}_instance"
     Environment = terraform.workspace
   }
 }
@@ -59,5 +59,5 @@ resource "aws_security_group_rule" "ingress_rule" {
   from_port         = 443
   to_port           = 443
   protocol          = "tcp"
-  self = true
+  self              = true
 }

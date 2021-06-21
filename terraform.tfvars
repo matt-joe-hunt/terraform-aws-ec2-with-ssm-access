@@ -7,5 +7,5 @@ instance_type = {
 }
 
 ami_id = {
-default = "null"
-  }
+  default = "null"
+}
